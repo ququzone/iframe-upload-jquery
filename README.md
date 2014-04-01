@@ -20,7 +20,7 @@ $(document).ready(function() {
 ``` java
 response.write(
     "<script type='text/javascript'>window.parent.upload_complete('"
-								+ filename
-								+ "','" + fileServerPath + "')</script>"
+	+ filename
+	+ "','" + fileServerPath + "')</script>"
 );
 ```
