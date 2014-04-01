@@ -31,7 +31,7 @@
             width: $(this).outerWidth(),
             height: $(this).outerHeight(),
             cursor: 'pointer'
-        }).addClass('btn btn-primary');
+        });
         $('#' + fileInputId).change(function() {
             settings.uploadCallback();
             $("#" + formId).submit();
