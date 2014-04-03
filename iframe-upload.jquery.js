@@ -19,7 +19,7 @@
             + settings.extraParams
             + '</form>'
             + '<iframe style="width: 0px; height: 0px; padding: 0px;" src="" '
-            + 'frameborder="0" name="' + iframeName + '"</iframe>');
+            + 'frameborder="0" id="' + iframeName + '" name="' + iframeName + '"</iframe>');
         $('#' + fileInputId).css({
             position: 'absolute',
             top: $(this).offset().top,
@@ -36,6 +36,13 @@
             settings.uploadCallback();
             $("#" + formId).submit();
         });
+        $(this).attr('upload-id', id);
         return this;
     };
+    
+    $.fn.destroyUpload = function() {
+        var id = $(this).attr('upload-id');
+        $('#form-'+id).remove();
+        $('#upload-'+id).remove();
+    }
 }(jQuery));
