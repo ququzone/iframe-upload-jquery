@@ -44,5 +44,5 @@
         var id = $(this).attr('upload-id');
         $('#form-'+id).remove();
         $('#upload-'+id).remove();
-    }
+    };
 }(jQuery));
